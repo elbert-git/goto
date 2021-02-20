@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#save argument to variable
+BOOKMARK=$1
+
+#main match statement
+case $BOOKMARK in
+	# -- main directories --
+	doc)
+		cd ~/Documents
+		;;
+	dls)
+		cd ~/Downloads
+		;;
+	# -- project directories --
+	goto)
+		cd ~/Documents/Projects/Project_Goto
+		;;
+	sheriff)
+		cd ~/Documents/Projects/Project_Foundations/Code/Q1 Sheriff/
+		;;
+	# -- catch all --
+	*)
+	echo "woopsie daisy; something went wrong somewhere.... "
+	echo \"$BOOKMARK\" "is not recognised"
+		;;
+esac
+
+
